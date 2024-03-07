@@ -8,7 +8,7 @@ const fromcurr=document.querySelector("#from select");
 
 const tocurr=document.querySelector("#to select");
 
-const msg = document.querySelector(".msg");
+
 
 
 const countryList = {
@@ -224,7 +224,7 @@ btn.addEventListener("click", async (evt) => {
         let finalAmount = amtVal * data.value;
         Swal.fire({
             icon: "success",
-            title: msg.innerText = `${amtVal} ${fromcurr.value} = ${finalAmount.toFixed(2)} ${tocurr.value}`,
+            title:`${amtVal} ${fromcurr.value} = ${finalAmount.toFixed(2)} ${tocurr.value}`,
           });
      }
    } catch (error) {
