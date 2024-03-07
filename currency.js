@@ -224,7 +224,7 @@ btn.addEventListener("click", async (evt) => {
         let finalAmount = amtVal * data.value;
         Swal.fire({
             icon: "success",
-            title: msg.innerText = `${amtVal} ${fromcurr.value} = ${finalAmount} ${tocurr.value}`,
+            title: msg.innerText = `${amtVal} ${fromcurr.value} = ${finalAmount.toFixed(2)} ${tocurr.value}`,
           });
      }
    } catch (error) {
