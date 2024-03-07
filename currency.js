@@ -222,22 +222,20 @@ btn.addEventListener("click", async (evt) => {
     let data = await response.json();
      if(response.status === 200){
         let finalAmount = amtVal * data.value;
-        msg.innerText = `${amtVal} ${fromcurr.value} = ${finalAmount} ${tocurr.value}`;
+        Swal.fire({
+            icon: "success",
+            title: msg.innerText = `${amtVal} ${fromcurr.value} = ${finalAmount} ${tocurr.value}`,
+          });
      }
    } catch (error) {
-    // alert("This Conversion is not available try different countries");
+    
     Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "This Conversion is not available try different countries!",
       });
    }
-    // console.log("amtVal:", amtVal);
-
-    // console.log("rate:",typeof rate);
-
     
-    // console.log("finalAmount:", finalAmount);
 
     
 });
