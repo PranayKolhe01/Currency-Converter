@@ -225,7 +225,12 @@ btn.addEventListener("click", async (evt) => {
         msg.innerText = `${amtVal} ${fromcurr.value} = ${finalAmount} ${tocurr.value}`;
      }
    } catch (error) {
-    alert("This Conversion is not available try different countries");
+    // alert("This Conversion is not available try different countries");
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "This Conversion is not available try different countries!",
+      });
    }
     // console.log("amtVal:", amtVal);
 
